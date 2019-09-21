@@ -4,75 +4,36 @@
 /*!
  * Footer styles
  */
-/* line 7, ../sass/layout/_footer.scss */
+/* line 5, ../sass/layout/_footer.scss */
 .site-footer {
   position: relative;
   background: #0B0D19;
 }
-
-/* line 12, ../sass/layout/_footer.scss */
-.site-footer::before {
-  content: '';
-  position: absolute;
-  top: -76px;
-  left: calc(50% - 360px);
-  width: 720px;
-  height: 291px;
-  background-image: url("../images/footer-bg.svg");
-  background-size: 720px 291px;
-  background-repeat: no-repeat;
-}
-
-/* line 24, ../sass/layout/_footer.scss */
-.site-footer .footer-particles-container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-/* line 32, ../sass/layout/_footer.scss */
-.site-footer-bottom {
+/* line 9, ../sass/layout/_footer.scss */
+.site-footer .site-footer-bottom {
   font-size: 14px;
   line-height: 22px;
   letter-spacing: 0px;
   z-index: 1;
 }
-
-/* line 41, ../sass/layout/_footer.scss */
-.site-footer-inner {
+/* line 16, ../sass/layout/_footer.scss */
+.site-footer .site-footer-bottom .container .site-footer-inner {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   position: relative;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
-
-/* line 50, ../sass/layout/_footer.scss */
-.footer-copyright {
+/* line 26, ../sass/layout/_footer.scss */
+.site-footer .site-footer-bottom .container .site-footer-inner .footer-copyright {
   flex: none;
   width: 100%;
   display: inline-flex;
   justify-content: center;
 }
 
-@media (min-width: 641px) {
-  /* line 59, ../sass/layout/_footer.scss */
-  .site-footer::before {
-    top: -152px;
-    left: calc(50% - 720px);
-    width: 1440px;
-    height: 582px;
-    background-size: 1440px 582px;
-  }
-
-  /* line 66, ../sass/layout/_footer.scss */
-  .site-footer-inner {
-    justify-content: space-between;
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-}
 /*!
  * Modals styles
  */
@@ -144,19 +105,6 @@
   color: rgba(0, 0, 0, 0.8);
 }
 
-/*.modal-title {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.25;
-  color: #00449e;
-  box-sizing: border-box;
-}*/
-/*.micromodal-slide .modal-container,
-.micromodal-slide .modal-overlay {
-  will-change: transform;
-}*/
 /*!
  * Animations styles
  */
@@ -375,24 +323,50 @@
   padding: 80px 0;
   z-index: 0;
 }
-/* line 25, ../sass/pages/_app.scss */
+@media (max-width: 475px) {
+  /* line 20, ../sass/pages/_app.scss */
+  .wrap-container main section.cellphone {
+    padding: 10px 0;
+  }
+}
+/* line 29, ../sass/pages/_app.scss */
 .wrap-container main section.cellphone .cellphone-inner {
   position: relative;
   z-index: 1;
   /*#game*/
 }
-/* line 29, ../sass/pages/_app.scss */
+/* line 33, ../sass/pages/_app.scss */
 .wrap-container main section.cellphone .cellphone-inner .cellphone-copy {
   position: relative;
   margin-bottom: 48px;
 }
-/* line 33, ../sass/pages/_app.scss */
+@media (max-width: 475px) {
+  /* line 33, ../sass/pages/_app.scss */
+  .wrap-container main section.cellphone .cellphone-inner .cellphone-copy {
+    margin-bottom: 0px;
+  }
+}
+@media (max-width: 475px) {
+  /* line 41, ../sass/pages/_app.scss */
+  .wrap-container main section.cellphone .cellphone-inner .cellphone-copy h1 {
+    margin-top: 0;
+  }
+}
+/* line 47, ../sass/pages/_app.scss */
 .wrap-container main section.cellphone .cellphone-inner .cellphone-copy .mine-logo {
   width: 80px;
   margin: 0 auto;
 }
-/* line 39, ../sass/pages/_app.scss */
+@media (max-width: 475px) {
+  /* line 47, ../sass/pages/_app.scss */
+  .wrap-container main section.cellphone .cellphone-inner .cellphone-copy .mine-logo {
+    width: 50px;
+  }
+}
+/* line 57, ../sass/pages/_app.scss */
 .wrap-container main section.cellphone .cellphone-inner #game {
+  width: 290px;
+  margin: auto;
   padding-top: 100px;
   background: url("../images/iphone-mine.png");
   background-size: cover;
@@ -401,16 +375,31 @@
   height: 780px;
   /*.board*/
 }
-/* line 47, ../sass/pages/_app.scss */
+@media (max-width: 475px) {
+  /* line 57, ../sass/pages/_app.scss */
+  .wrap-container main section.cellphone .cellphone-inner #game {
+    padding-top: 0px;
+    background: none;
+    width: 100% !important;
+    height: 430px;
+  }
+}
+/* line 74, ../sass/pages/_app.scss */
 .wrap-container main section.cellphone .cellphone-inner #game .select {
   display: none;
 }
-/* line 51, ../sass/pages/_app.scss */
+/* line 78, ../sass/pages/_app.scss */
 .wrap-container main section.cellphone .cellphone-inner #game .board {
   width: 290px;
   margin: 0 auto;
 }
-/* line 56, ../sass/pages/_app.scss */
+@media (max-width: 461px) {
+  /* line 78, ../sass/pages/_app.scss */
+  .wrap-container main section.cellphone .cellphone-inner #game .board {
+    width: 240px;
+  }
+}
+/* line 87, ../sass/pages/_app.scss */
 .wrap-container main section.cellphone .cellphone-inner #game .board .field {
   width: 36px;
   height: 36px;
@@ -426,7 +415,15 @@
   border-right: 0px solid white;
   border-bottom: 0px solid white;
 }
-/* line 74, ../sass/pages/_app.scss */
+@media (max-width: 461px) {
+  /* line 87, ../sass/pages/_app.scss */
+  .wrap-container main section.cellphone .cellphone-inner #game .board .field {
+    width: 30px;
+    height: 30px;
+    line-height: 33px;
+  }
+}
+/* line 111, ../sass/pages/_app.scss */
 .wrap-container main section.cellphone .cellphone-inner #game .board .field.hidden {
   background-image: none !important;
   background-color: rgba(255, 255, 255, 0.1);
@@ -436,79 +433,39 @@
   border-right: 1px solid white;
   border-bottom: 1px solid white;
 }
-/* line 83, ../sass/pages/_app.scss */
+/* line 120, ../sass/pages/_app.scss */
 .wrap-container main section.cellphone .cellphone-inner #game .board .field.hidden span {
   display: none !important;
 }
-/* line 85, ../sass/pages/_app.scss */
+/* line 122, ../sass/pages/_app.scss */
 .wrap-container main section.cellphone .cellphone-inner #game .board .field.hidden.flag {
   background: url("../images/flag.png") center no-repeat !important;
   background-color: rgba(255, 255, 255, 0.1);
 }
-/* line 89, ../sass/pages/_app.scss */
+/* line 126, ../sass/pages/_app.scss */
 .wrap-container main section.cellphone .cellphone-inner #game .board .field.hidden.flag span {
   display: none;
 }
-/* line 93, ../sass/pages/_app.scss */
+/* line 130, ../sass/pages/_app.scss */
 .wrap-container main section.cellphone .cellphone-inner #game .board .field.mine {
   background: url("../images/mine.png") center no-repeat;
   background-color: rgba(255, 255, 255, 0.1);
 }
-/* line 100, ../sass/pages/_app.scss */
+/* line 137, ../sass/pages/_app.scss */
 .wrap-container main section.cellphone .cellphone-inner #game button.newGame {
   margin-top: 60px;
 }
-
-/* line 119, ../sass/pages/_app.scss */
-.device {
+@media (max-width: 461px) {
+  /* line 137, ../sass/pages/_app.scss */
+  .wrap-container main section.cellphone .cellphone-inner #game button.newGame {
+    margin-top: 30px;
+  }
+}
+/* line 146, ../sass/pages/_app.scss */
+.wrap-container main section.cellphone .cellphone-inner .device {
   position: relative;
   width: 450px;
   height: auto;
   margin: 0 auto;
   z-index: 1;
-}
-
-/* line 128, ../sass/pages/_app.scss */
-.has-animations .features-extended {
-  opacity: 0;
-}
-
-/* line 133, ../sass/pages/_app.scss */
-.has-animations.is-loaded .features-extended {
-  opacity: 1;
-}
-
-/* line 137, ../sass/pages/_app.scss */
-.is-boxed {
-  background: #fff;
-}
-
-/* line 144, ../sass/pages/_app.scss */
-.section-inner {
-  position: relative;
-  padding-top: 48px;
-  padding-bottom: 48px;
-}
-
-@media (min-width: 641px) {
-  /* line 151, ../sass/pages/_app.scss */
-  .section-inner {
-    padding-top: 88px;
-    padding-bottom: 88px;
-  }
-}
-/* line 159, ../sass/pages/_app.scss */
-.minesweeper {
-  width: 290px;
-  margin: auto;
-}
-
-/* line 167, ../sass/pages/_app.scss */
-h2 {
-  color: #ff6562;
-}
-
-/* line 178, ../sass/pages/_app.scss */
-.clear {
-  clear: both;
 }

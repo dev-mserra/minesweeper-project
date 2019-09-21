@@ -22,6 +22,10 @@
 		    padding: 80px 0;
 		    z-index: 0;
 
+		    @media (max-width: 475px) {
+				padding: 10px 0;
+			}
+
 		    .cellphone-inner {
 			    position: relative;
 			    z-index: 1;
@@ -30,19 +34,42 @@
 				    position: relative;
 				    margin-bottom: 48px;
 
+				    @media (max-width: 475px) {
+						margin-bottom: 0px;
+					}
+
+				    h1{
+				    	@media (max-width: 475px) {
+							margin-top: 0;
+						}
+				    }
+
 				    .mine-logo {
 					   width: 80px;
 					   margin: 0 auto;
+
+					   @media (max-width: 475px) {
+							width: 50px;
+						}
 					}
 				}
 
 				#game{
+					width: 290px;
+    				margin: auto;
 					padding-top: 100px;
 					background: url('../images/iphone-mine.png');
 					background-size: cover;
 					width: 450px !important;
 					margin: auto;
 					height: 780px;
+
+					@media (max-width: 475px) {
+						padding-top: 0px;
+						background: none;
+					    width: 100%!important;
+					    height: 430px;
+					}
 
 					.select{
 						display: none;
@@ -51,6 +78,10 @@
 					.board{
 						width: 290px;
 					    margin: 0 auto;
+
+					    @media (max-width: 461px) {
+							width: 240px;
+						}
 
 
 						.field{
@@ -70,6 +101,12 @@
 						    border-left: 0px solid white;
 						    border-right: 0px solid white;
 						    border-bottom: 0px solid white;
+
+						    @media (max-width: 461px) {
+								width: 30px;
+								height: 30px;
+								line-height: 33px;
+							}
 
 							&.hidden{
 							    background-image:none !important;
@@ -99,80 +136,21 @@
 
 					button.newGame {
 						margin-top: 60px;
+
+						 @media (max-width: 461px) {
+							margin-top: 30px;
+						}
 					}
 				} /*#game*/
+
+				.device {
+				    position: relative;
+				    width: 450px;
+				    height: auto;
+				    margin: 0 auto;
+				    z-index: 1;
+				}
 			}
 		} /*section.cellphone*/
 	} /*main*/
 }
-
-
-
-
-
-
-
-
-
-
-
-.device {
-    position: relative;
-    width: 450px;
-    height: auto;
-    margin: 0 auto;
-    z-index: 1;
-}
-
-.has-animations{
-   .features-extended {
-	    opacity: 0
-	}
-}
-
-.has-animations.is-loaded .features-extended {
-    opacity: 1
-}
-
-.is-boxed {
-    background: #fff
-}
-
-
-
-
-.section-inner {
-    position: relative;
-    padding-top: 48px;
-    padding-bottom: 48px
-}
-
-@media (min-width: 641px) {
-    .section-inner {
-        padding-top: 88px;
-        padding-bottom: 88px
-    }
-}
-
-
-
-.minesweeper{
-    width: 290px;
-    margin: auto;
-}
-
-
-
-
-h2{
-	color: #ff6562;
-}
-
-
-
-
-
-
-
-
-.clear { clear: both; }
