@@ -11,6 +11,7 @@
     
     <script src="js/jquery-1.8.2.min.js"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+    <script src="https://unpkg.com/micromodal@0.4.2/dist/micromodal.min.js"></script>
     <script>
         $(document).ready(function ()
         {
@@ -50,7 +51,47 @@
                 </div>
             </section>
         </main>
+
+        <footer class="site-footer">
+            <div class="site-footer-bottom">
+                <div class="container">
+                    <div class="site-footer-inner">
+                        <div class="footer-copyright">Credits - Matias Serra</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
+
+
+
+    <!-- modals -->
+    <div id="modal-1" class="modal micromodal-slide" aria-hidden="true">
+        <div class="modal-overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                <div class="modal-header">
+                    <button class="modal-close" aria-label="Close modal" data-micromodal-close></button>
+                </div>
+                <div class="modal-content" id="modal-1-content">
+                    <img src="images/yw.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-2" class="modal micromodal-slide" aria-hidden="true">
+        <div class="modal-overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-2-title">
+                <div class="modal-header">
+                    <button class="modal-close" aria-label="Close modal" data-micromodal-close></button>
+                </div>
+                <div class="modal-content" id="modal-2-content">
+                    <img src="images/go.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="js/main.js"></script>
 </body>

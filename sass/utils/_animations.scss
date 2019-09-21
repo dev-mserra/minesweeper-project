@@ -1,0 +1,181 @@
+/*!
+ * Animations styles
+ */
+
+
+/*cellphone*/
+
+.has-animations .cellphone .cellphone-bg,
+.has-animations .cellphone::before,
+.has-animations .cellphone::after,
+.has-animations .cellphone-particles-container,
+.has-animations .site-header,
+.has-animations .cellphone .mine-logo,
+.has-animations .cellphone-title,
+.has-animations .cellphone-paragraph,
+.has-animations .cellphone-cta,
+.has-animations .cellphone .mockup-bg,
+.has-animations .cellphone .device {
+    opacity: 0
+}
+
+
+.has-animations.is-loaded .cellphone::before,
+.has-animations.is-loaded .cellphone::after {
+    -webkit-animation: cellphoneFadeIn .6s ease forwards .45s;
+    animation: cellphoneFadeIn .6s ease forwards .45s
+}
+
+.has-animations.is-loaded .site-header,
+.has-animations.is-loaded .cellphone-particles-container,
+.has-animations.is-loaded .cellphone .mockup-bg {
+    -webkit-animation: cellphoneFadeIn .6s ease forwards .45s;
+    animation: cellphoneFadeIn .6s ease forwards .45s
+}
+
+.has-animations.is-loaded .mine-logo {
+    -webkit-animation: cellphoneContent 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 0.15s;
+    animation: cellphoneContent 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 0.15s
+}
+
+.has-animations.is-loaded .cellphone-title {
+    -webkit-animation: cellphoneContent 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 0.45s;
+    animation: cellphoneContent 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 0.45s
+}
+
+.has-animations.is-loaded .cellphone-paragraph {
+    -webkit-animation: cellphoneContent 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 0.3s;
+    animation: cellphoneContent 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 0.3s
+}
+
+.has-animations.is-loaded .cellphone-cta {
+    -webkit-animation: cellphoneContent 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 0.45s;
+    animation: cellphoneContent 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 0.45s
+}
+
+.has-animations.is-loaded .cellphone .device {
+    -webkit-animation: cellphoneDevice .6s ease forwards .6s;
+    animation: cellphoneDevice .6s ease forwards .6s
+}
+
+
+@-webkit-keyframes cellphoneContent {
+    from {
+        -webkit-transform: translateY(40px) skewY(2deg);
+        transform: translateY(40px) skewY(2deg);
+        opacity: 0
+    }
+    to {
+        -webkit-transform: translateY(0) skewY(0);
+        transform: translateY(0) skewY(0);
+        opacity: 1
+    }
+}
+
+@keyframes cellphoneContent {
+    from {
+        -webkit-transform: translateY(40px) skewY(2deg);
+        transform: translateY(40px) skewY(2deg);
+        opacity: 0
+    }
+    to {
+        -webkit-transform: translateY(0) skewY(0);
+        transform: translateY(0) skewY(0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes cellphoneDevice {
+    from {
+        -webkit-transform: translateY(80px);
+        transform: translateY(80px);
+        opacity: 0
+    }
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@keyframes cellphoneDevice {
+    from {
+        -webkit-transform: translateY(80px);
+        transform: translateY(80px);
+        opacity: 0
+    }
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes cellphoneFadeIn {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes cellphoneFadeIn {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+
+
+.has-animations .features-extended {
+    opacity: 0
+}
+
+.has-animations.is-loaded .features-extended {
+    opacity: 1
+}
+
+
+
+/*modals*/
+
+.micromodal-slide[aria-hidden="false"] .modal-overlay {
+  animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="false"] .modal-container {
+  animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal-overlay {
+  animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal-container {
+  animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+@keyframes mmfadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@keyframes mmfadeOut {
+    from { opacity: 1; }
+      to { opacity: 0; }
+}
+
+@keyframes mmslideIn {
+  from { transform: translateY(15%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes mmslideOut {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10%); }
+}

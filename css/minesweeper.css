@@ -2,6 +2,162 @@
  * Minesweeper
  */
 /*!
+ * Footer styles
+ */
+/* line 7, ../sass/layout/_footer.scss */
+.site-footer {
+  position: relative;
+  background: #0B0D19;
+}
+
+/* line 12, ../sass/layout/_footer.scss */
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: -76px;
+  left: calc(50% - 360px);
+  width: 720px;
+  height: 291px;
+  background-image: url("../images/footer-bg.svg");
+  background-size: 720px 291px;
+  background-repeat: no-repeat;
+}
+
+/* line 24, ../sass/layout/_footer.scss */
+.site-footer .footer-particles-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* line 32, ../sass/layout/_footer.scss */
+.site-footer-bottom {
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0px;
+  z-index: 1;
+}
+
+/* line 41, ../sass/layout/_footer.scss */
+.site-footer-inner {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* line 50, ../sass/layout/_footer.scss */
+.footer-copyright {
+  flex: none;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+}
+
+@media (min-width: 641px) {
+  /* line 59, ../sass/layout/_footer.scss */
+  .site-footer::before {
+    top: -152px;
+    left: calc(50% - 720px);
+    width: 1440px;
+    height: 582px;
+    background-size: 1440px 582px;
+  }
+
+  /* line 66, ../sass/layout/_footer.scss */
+  .site-footer-inner {
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+/*!
+ * Modals styles
+ */
+/* line 7, ../sass/components/_modals.scss */
+#modal-1 .modal-container, #modal-2 .modal-container {
+  background-color: #2db025;
+}
+/* line 10, ../sass/components/_modals.scss */
+#modal-1 .modal-container img, #modal-2 .modal-container img {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
+/* line 16, ../sass/components/_modals.scss */
+#modal-1 .modal-container button, #modal-2 .modal-container button {
+  float: right;
+}
+
+/* line 25, ../sass/components/_modals.scss */
+#modal-2 .modal-container {
+  background-color: #d91220;
+}
+
+/* line 34, ../sass/components/_modals.scss */
+.modal.micromodal-slide {
+  display: none;
+}
+/* line 37, ../sass/components/_modals.scss */
+.modal.micromodal-slide.is-open {
+  display: block;
+}
+/* line 42, ../sass/components/_modals.scss */
+.modal .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 53, ../sass/components/_modals.scss */
+.modal .modal-overlay .modal-container {
+  /*background-color: #443691;*/
+  padding: 10px;
+  min-width: 300px;
+  max-height: 100vh;
+  border-radius: 4px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+/* line 63, ../sass/components/_modals.scss */
+.modal .modal-overlay .modal-container .modal-header button.modal-close {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+/* line 68, ../sass/components/_modals.scss */
+.modal .modal-overlay .modal-container .modal-header button.modal-close:before {
+  content: "\2715";
+}
+/* line 72, ../sass/components/_modals.scss */
+.modal .modal-overlay .modal-container .modal-content {
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/*.modal-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  color: #00449e;
+  box-sizing: border-box;
+}*/
+/*.micromodal-slide .modal-container,
+.micromodal-slide .modal-overlay {
+  will-change: transform;
+}*/
+/*!
  * Animations styles
  */
 /*cellphone*/

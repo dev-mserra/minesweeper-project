@@ -20,6 +20,18 @@
     })
 }();
 
+MicroModal.init({
+  onShow: modal => console.info(`${modal.id} is shown`), // [1]
+  onClose: modal => console.info(`${modal.id} is hidden`), // [2]
+  openTrigger: 'data-custom-open', // [3]
+  closeTrigger: 'data-custom-close', // [4]
+  disableScroll: true, // [5]
+  disableFocus: false, // [6]
+  awaitOpenAnimation: false, // [7]
+  awaitCloseAnimation: false, // [8]
+  debugMode: true // [9]
+});
+
 
 (function(h) {
     var t = function(g, p, i) {
@@ -163,13 +175,15 @@
             h(b).one("win", function() {
                 i.stop();
                 window.setTimeout(function() {
-                        window.alert("You Win!")
+                        // window.alert("You Win!")
+                        MicroModal.show('modal-1'); // [1]
                     },
                     100)
             }).one("gameover", function() {
                 i.stop();
                 window.setTimeout(function() {
-                    window.alert("Game Over!")
+                    // window.alert("Game Over!")
+                    MicroModal.show('modal-2'); // [2]
                 }, 100)
             }).one("fieldSelected", p).on("fieldSelected", i.reveal);
             window.clearInterval(l);
