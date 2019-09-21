@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Minesweeper - Darwoft test</title>
     <link href="https://fonts.googleapis.com/css?family=Heebo:400,700|Oxygen:700" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/minesweeper.css" />
-
+    
     <script src="js/jquery-1.8.2.min.js"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
     <script>
@@ -16,26 +17,39 @@
             $('#game').minesweeper();
         });
     </script>
-
 </head>
 <body class="is-boxed has-animations">
 
+    <div class="wrap-container boxed-container">
+        <main>
+            <section class="cellphone text-center text-light">
+                <div class="cellphone-bg"></div>
+                <div class="container-sm">
+                    <div class="cellphone-inner">
+                        <div class="cellphone-copy">
+                            <img class="mine-logo" src="images/mine.svg" alt="Logo">
+                            <h1 class="cellphone-title mt-0">Minesweeper</h1>
+                        </div>
+                        <div id="game" class="minesweeper device">
+                            <div class="select">
+                                <span>Select Level:</span>
+                                <select class="level">
+                                    <option value="easy">Easy</option>
+                                    <option value="advanced">Advanced</option>
+                                </select>
+                                
+                            </div>
+                            <div id="timerzone">                                
+                                <h2><span class="timer">0</span></h2>
+                            </div>
+                            <div class="board"></div>
 
-	<div id="game" class="minesweeper device">
-        <div class="select">
-            <span>Select Level:</span>
-            <select class="level">
-                <option value="easy">Easy</option>
-                <option value="advanced">Advanced</option>
-            </select>
-            
-        </div>
-        <div id="timerzone">					            
-            <h2><span class="timer">0</span></h2>
-        </div>
-        <div class="board"></div>
-
-        <button class="newGame button button-primary" type="button">New game</button>
+                            <button class="newGame button button-primary" type="button">New game</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
 
     <script src="js/main.js"></script>

@@ -2,3 +2,177 @@
  * App styles
  */
 
+.wrap-container {
+    background: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    main {
+	    flex: 1 0 auto;
+	    background: url('../images/bg-hero.png');
+	    background-repeat: no-repeat;
+	    background-color: #41318c;
+
+	    section.cellphone {
+		    position: relative;
+		    padding: 80px 0;
+		    z-index: 0;
+
+		    .cellphone-inner {
+			    position: relative;
+			    z-index: 1;
+
+			    .cellphone-copy {
+				    position: relative;
+				    margin-bottom: 48px;
+
+				    .mine-logo {
+					   width: 80px;
+					   margin: 0 auto;
+					}
+				}
+
+				#game{
+					padding-top: 100px;
+					background: url('../images/iphone-mine.png');
+					background-size: cover;
+					width: 450px !important;
+					margin: auto;
+					height: 780px;
+
+					.select{
+						display: none;
+					}
+
+					.board{
+						width: 290px;
+					    margin: 0 auto;
+
+
+						.field{
+							width: 36px;
+							height: 36px;
+							float:left;
+							
+							text-align: center;
+							cursor: pointer;
+							line-height: 40px;
+							
+							background-color: rgba(255, 255, 255, .1);
+							font-size: 20px;
+							color: white;
+
+							border-top: 0px solid white;
+						    border-left: 0px solid white;
+						    border-right: 0px solid white;
+						    border-bottom: 0px solid white;
+
+							&.hidden{
+							    background-image:none !important;
+							    background-color: rgba(255, 255, 255, .1);
+								color: #eee !important;
+								border-top: 1px solid white;
+							    border-left: 1px solid white;
+							    border-right: 1px solid white;
+							    border-bottom: 1px solid white;
+
+							    span{ display: none !important;}
+
+								&.flag {
+									background: url('../images/flag.png') center no-repeat !important;
+									background-color: rgba(255, 255, 255, .1);
+
+									span { display: none; }
+								}
+							}
+						  
+							&.mine {
+								background: url('../images/mine.png') center no-repeat;
+								background-color: rgba(255, 255, 255, .1);
+							}
+						}
+					} /*.board*/
+
+					button.newGame {
+						margin-top: 60px;
+					}
+				} /*#game*/
+			}
+		} /*section.cellphone*/
+	} /*main*/
+}
+
+
+
+
+
+
+
+
+
+
+
+.device {
+    position: relative;
+    width: 450px;
+    height: auto;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.has-animations{
+   .features-extended {
+	    opacity: 0
+	}
+}
+
+.has-animations.is-loaded .features-extended {
+    opacity: 1
+}
+
+.is-boxed {
+    background: #fff
+}
+
+
+
+
+.section-inner {
+    position: relative;
+    padding-top: 48px;
+    padding-bottom: 48px
+}
+
+@media (min-width: 641px) {
+    .section-inner {
+        padding-top: 88px;
+        padding-bottom: 88px
+    }
+}
+
+
+
+.minesweeper{
+    width: 290px;
+    margin: auto;
+}
+
+
+
+
+h2{
+	color: #ff6562;
+}
+
+
+
+
+
+
+
+
+.clear { clear: both; }

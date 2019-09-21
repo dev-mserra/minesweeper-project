@@ -2,5 +2,357 @@
  * Minesweeper
  */
 /*!
+ * Animations styles
+ */
+/*cellphone*/
+/* line 8, ../sass/utils/_animations.scss */
+.has-animations .cellphone .cellphone-bg,
+.has-animations .cellphone::before,
+.has-animations .cellphone::after,
+.has-animations .cellphone-particles-container,
+.has-animations .site-header,
+.has-animations .cellphone .mine-logo,
+.has-animations .cellphone-title,
+.has-animations .cellphone-paragraph,
+.has-animations .cellphone-cta,
+.has-animations .cellphone .mockup-bg,
+.has-animations .cellphone .device {
+  opacity: 0;
+}
+
+/* line 23, ../sass/utils/_animations.scss */
+.has-animations.is-loaded .cellphone::before,
+.has-animations.is-loaded .cellphone::after {
+  -webkit-animation: cellphoneFadeIn .6s ease forwards .45s;
+  animation: cellphoneFadeIn 0.6s ease forwards 0.45s;
+}
+
+/* line 29, ../sass/utils/_animations.scss */
+.has-animations.is-loaded .site-header,
+.has-animations.is-loaded .cellphone-particles-container,
+.has-animations.is-loaded .cellphone .mockup-bg {
+  -webkit-animation: cellphoneFadeIn .6s ease forwards .45s;
+  animation: cellphoneFadeIn 0.6s ease forwards 0.45s;
+}
+
+/* line 36, ../sass/utils/_animations.scss */
+.has-animations.is-loaded .mine-logo {
+  -webkit-animation: cellphoneContent 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 0.15s;
+  animation: cellphoneContent 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 0.15s;
+}
+
+/* line 41, ../sass/utils/_animations.scss */
+.has-animations.is-loaded .cellphone-title {
+  -webkit-animation: cellphoneContent 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 0.45s;
+  animation: cellphoneContent 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 0.45s;
+}
+
+/* line 46, ../sass/utils/_animations.scss */
+.has-animations.is-loaded .cellphone-paragraph {
+  -webkit-animation: cellphoneContent 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 0.3s;
+  animation: cellphoneContent 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 0.3s;
+}
+
+/* line 51, ../sass/utils/_animations.scss */
+.has-animations.is-loaded .cellphone-cta {
+  -webkit-animation: cellphoneContent 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 0.45s;
+  animation: cellphoneContent 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 0.45s;
+}
+
+/* line 56, ../sass/utils/_animations.scss */
+.has-animations.is-loaded .cellphone .device {
+  -webkit-animation: cellphoneDevice .6s ease forwards .6s;
+  animation: cellphoneDevice 0.6s ease forwards 0.6s;
+}
+
+@-webkit-keyframes cellphoneContent {
+  from {
+    -webkit-transform: translateY(40px) skewY(2deg);
+    transform: translateY(40px) skewY(2deg);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0) skewY(0);
+    transform: translateY(0) skewY(0);
+    opacity: 1;
+  }
+}
+@keyframes cellphoneContent {
+  from {
+    -webkit-transform: translateY(40px) skewY(2deg);
+    transform: translateY(40px) skewY(2deg);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0) skewY(0);
+    transform: translateY(0) skewY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes cellphoneDevice {
+  from {
+    -webkit-transform: translateY(80px);
+    transform: translateY(80px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes cellphoneDevice {
+  from {
+    -webkit-transform: translateY(80px);
+    transform: translateY(80px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes cellphoneFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes cellphoneFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* line 135, ../sass/utils/_animations.scss */
+.has-animations .features-extended {
+  opacity: 0;
+}
+
+/* line 139, ../sass/utils/_animations.scss */
+.has-animations.is-loaded .features-extended {
+  opacity: 1;
+}
+
+/*modals*/
+/* line 147, ../sass/utils/_animations.scss */
+.micromodal-slide[aria-hidden="false"] .modal-overlay {
+  animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* line 151, ../sass/utils/_animations.scss */
+.micromodal-slide[aria-hidden="false"] .modal-container {
+  animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* line 155, ../sass/utils/_animations.scss */
+.micromodal-slide[aria-hidden="true"] .modal-overlay {
+  animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* line 159, ../sass/utils/_animations.scss */
+.micromodal-slide[aria-hidden="true"] .modal-container {
+  animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+@keyframes mmfadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes mmfadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes mmslideIn {
+  from {
+    transform: translateY(15%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes mmslideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10%);
+  }
+}
+/*!
  * App styles
  */
+/* line 5, ../sass/pages/_app.scss */
+.wrap-container {
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+  /*main*/
+}
+/* line 14, ../sass/pages/_app.scss */
+.wrap-container main {
+  flex: 1 0 auto;
+  background: url("../images/bg-hero.png");
+  background-repeat: no-repeat;
+  background-color: #41318c;
+  /*section.cellphone*/
+}
+/* line 20, ../sass/pages/_app.scss */
+.wrap-container main section.cellphone {
+  position: relative;
+  padding: 80px 0;
+  z-index: 0;
+}
+/* line 25, ../sass/pages/_app.scss */
+.wrap-container main section.cellphone .cellphone-inner {
+  position: relative;
+  z-index: 1;
+  /*#game*/
+}
+/* line 29, ../sass/pages/_app.scss */
+.wrap-container main section.cellphone .cellphone-inner .cellphone-copy {
+  position: relative;
+  margin-bottom: 48px;
+}
+/* line 33, ../sass/pages/_app.scss */
+.wrap-container main section.cellphone .cellphone-inner .cellphone-copy .mine-logo {
+  width: 80px;
+  margin: 0 auto;
+}
+/* line 39, ../sass/pages/_app.scss */
+.wrap-container main section.cellphone .cellphone-inner #game {
+  padding-top: 100px;
+  background: url("../images/iphone-mine.png");
+  background-size: cover;
+  width: 450px !important;
+  margin: auto;
+  height: 780px;
+  /*.board*/
+}
+/* line 47, ../sass/pages/_app.scss */
+.wrap-container main section.cellphone .cellphone-inner #game .select {
+  display: none;
+}
+/* line 51, ../sass/pages/_app.scss */
+.wrap-container main section.cellphone .cellphone-inner #game .board {
+  width: 290px;
+  margin: 0 auto;
+}
+/* line 56, ../sass/pages/_app.scss */
+.wrap-container main section.cellphone .cellphone-inner #game .board .field {
+  width: 36px;
+  height: 36px;
+  float: left;
+  text-align: center;
+  cursor: pointer;
+  line-height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 20px;
+  color: white;
+  border-top: 0px solid white;
+  border-left: 0px solid white;
+  border-right: 0px solid white;
+  border-bottom: 0px solid white;
+}
+/* line 74, ../sass/pages/_app.scss */
+.wrap-container main section.cellphone .cellphone-inner #game .board .field.hidden {
+  background-image: none !important;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #eee !important;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+}
+/* line 83, ../sass/pages/_app.scss */
+.wrap-container main section.cellphone .cellphone-inner #game .board .field.hidden span {
+  display: none !important;
+}
+/* line 85, ../sass/pages/_app.scss */
+.wrap-container main section.cellphone .cellphone-inner #game .board .field.hidden.flag {
+  background: url("../images/flag.png") center no-repeat !important;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* line 89, ../sass/pages/_app.scss */
+.wrap-container main section.cellphone .cellphone-inner #game .board .field.hidden.flag span {
+  display: none;
+}
+/* line 93, ../sass/pages/_app.scss */
+.wrap-container main section.cellphone .cellphone-inner #game .board .field.mine {
+  background: url("../images/mine.png") center no-repeat;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* line 100, ../sass/pages/_app.scss */
+.wrap-container main section.cellphone .cellphone-inner #game button.newGame {
+  margin-top: 60px;
+}
+
+/* line 119, ../sass/pages/_app.scss */
+.device {
+  position: relative;
+  width: 450px;
+  height: auto;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+/* line 128, ../sass/pages/_app.scss */
+.has-animations .features-extended {
+  opacity: 0;
+}
+
+/* line 133, ../sass/pages/_app.scss */
+.has-animations.is-loaded .features-extended {
+  opacity: 1;
+}
+
+/* line 137, ../sass/pages/_app.scss */
+.is-boxed {
+  background: #fff;
+}
+
+/* line 144, ../sass/pages/_app.scss */
+.section-inner {
+  position: relative;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+@media (min-width: 641px) {
+  /* line 151, ../sass/pages/_app.scss */
+  .section-inner {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+}
+/* line 159, ../sass/pages/_app.scss */
+.minesweeper {
+  width: 290px;
+  margin: auto;
+}
+
+/* line 167, ../sass/pages/_app.scss */
+h2 {
+  color: #ff6562;
+}
+
+/* line 178, ../sass/pages/_app.scss */
+.clear {
+  clear: both;
+}
