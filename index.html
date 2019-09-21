@@ -18,7 +18,26 @@
     </script>
 
 </head>
-<body>
-	<script src="js/main.js"></script>
+<body class="is-boxed has-animations">
+
+
+	<div id="game" class="minesweeper device">
+        <div class="select">
+            <span>Select Level:</span>
+            <select class="level">
+                <option value="easy">Easy</option>
+                <option value="advanced">Advanced</option>
+            </select>
+            
+        </div>
+        <div id="timerzone">					            
+            <h2><span class="timer">0</span></h2>
+        </div>
+        <div class="board"></div>
+
+        <button class="newGame button button-primary" type="button">New game</button>
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
