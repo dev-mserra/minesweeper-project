@@ -1,2 +1,2 @@
 # minesweeper-project
-Darwoft test
+This is Minesweeper repository
